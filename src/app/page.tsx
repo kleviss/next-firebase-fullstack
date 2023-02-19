@@ -1,16 +1,15 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+import Image from "next/image";
+import { Inter } from "@next/font/google";
+import styles from "./page.module.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
+          <code className={styles.code}>FOREX TRADING ACADEMY&nbsp;</code>
         </p>
         <div>
           <a
@@ -18,13 +17,12 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
+              src="/visionfx-brardhe.png"
+              alt="VisionFX Logo"
               className={styles.vercelLogo}
-              width={100}
-              height={24}
+              width={110}
+              height={45}
               priority
             />
           </a>
@@ -32,16 +30,47 @@ export default function Home() {
       </div>
 
       <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+        <div className={styles.headGrid}>
+          {/* Hero Div with big title, subtitel and button */}
+          <div className={styles.head}>
+            <h1 className={inter.className}>
+              <span className={styles.titleSpan}>
+                Bëhu i sukseshëm në Forex Trading
+              </span>
+            </h1>
+            <p className={inter.className}>
+              <span className={styles.subtitleSpan}>
+                Kursi i vetem komplet në gjuhën shqipe që do ju duhet për tu
+                bërë mjeshtra të forexit.{" "}
+                <span style={{ textDecoration: "underline" }}>
+                  #leTaMarrimAtBuke
+                </span>
+                {" 🍞 "}
+                se bashku djema!
+              </span>
+            </p>{" "}
+            <div className={styles.button}>
+              <p className={inter.className}>
+                <span className={styles.subtitleSpan}>
+                  <a
+                    href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Rregjistrohu
+                  </a>
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <Image
+            src="/head.png"
+            alt="VisionFX Head Hero"
+            width={464}
+            height={436}
+            priority
+          />
         </div>
       </div>
 
@@ -53,10 +82,10 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
+            Mesime Falas <span>-&gt;</span>
           </h2>
           <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
+            Mesime falas per te gjithe qe deshiron te futen ne boten e Forex-it
           </p>
         </a>
 
@@ -67,9 +96,12 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
+            Kursi me pagese <span>-&gt;</span>
           </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
+          <p className={inter.className}>
+            Analizat teknike dhe pergatitje e avancuar per te bere i suksesshem
+            ne forex
+          </p>
         </a>
 
         <a
@@ -79,13 +111,14 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
+            Analiza Teknike <span>-&gt;</span>
           </h2>
           <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            Shpjegimi i disa koncepteve bazike te menyres sesi funksionon
+            analiza teknike
           </p>
         </a>
       </div>
     </main>
-  )
+  );
 }
