@@ -29,49 +29,48 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.center}>
-        <div className={styles.headGrid}>
-          {/* Hero Div with big title, subtitel and button */}
-          <div className={styles.head}>
-            <h1 className={inter.className}>
-              <span className={styles.titleSpan}>
-                Bëhu i sukseshëm në Forex Trading
+      <div className={styles.headGrid}>
+        {/* Hero Div with big title, subtitel and button */}
+        <div className={styles.hero}>
+          <h1 className={inter.className}>
+            <span className={styles.heroTitleSpan}>
+              Bëhu i sukseshëm në Forex Trading
+            </span>
+          </h1>
+          <p className={inter.className}>
+            <span className={styles.heroSubtitleSpan}>
+              Kursi i vetem komplet në gjuhën shqipe që do ju duhet për tu bërë
+              mjeshtra të forexit.{" "}
+              <span style={{ textDecoration: "underline" }}>
+                #leTaMarrimAtBuke
               </span>
-            </h1>
+              {" 🍞 "}
+              se bashku djema!
+            </span>
+          </p>{" "}
+          <div className={styles.button}>
             <p className={inter.className}>
               <span className={styles.subtitleSpan}>
-                Kursi i vetem komplet në gjuhën shqipe që do ju duhet për tu
-                bërë mjeshtra të forexit.{" "}
-                <span style={{ textDecoration: "underline" }}>
-                  #leTaMarrimAtBuke
-                </span>
-                {" 🍞 "}
-                se bashku djema!
+                <a
+                  href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Rregjistrohu
+                </a>
               </span>
-            </p>{" "}
-            <div className={styles.button}>
-              <p className={inter.className}>
-                <span className={styles.subtitleSpan}>
-                  <a
-                    href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Rregjistrohu
-                  </a>
-                </span>
-              </p>
-            </div>
+            </p>
           </div>
-
-          <Image
-            src="/head.png"
-            alt="VisionFX Head Hero"
-            width={464}
-            height={436}
-            priority
-          />
         </div>
+
+        <Image
+          src="/head.png"
+          alt="VisionFX Head Hero"
+          width={464}
+          height={436}
+          style={{ marginLeft: 100 }}
+          priority
+        />
       </div>
 
       <div className={styles.grid}>

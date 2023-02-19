@@ -193,6 +193,30 @@
     text-align: center;
   }
 
+  .headGrid {
+    grid-template-columns: 1fr;
+    margin-bottom: 26px;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .headGrid img {
+    display: none;
+  }
+
+  .headGrid h1 {
+    margin-bottom: 2.6rem;
+    margin-left: -20px;
+  }
+
+  .headGrid p {
+    padding: 0 1rem;
+  }
+
+  .headGrid .button {
+    margin-left: -20px;
+  }
+
   .card {
     padding: 1rem 2.5rem;
   }
@@ -265,7 +289,23 @@
   color: var(--title);
 }
 
+.heroTitleSpan {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--title);
+}
+
 .titleSpan::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 0.5rem;
+  background: var(--title);
+}
+.heroSubtitleSpan::after {
   content: "";
   display: block;
   width: 100%;
@@ -282,7 +322,26 @@
   color: var(--title);
 }
 
+.heroSubtitleSpan {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--title);
+  margin-top: 10px;
+  padding-right: 10px;
+}
+
 .subtitleSpan::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 0.5rem;
+  background: var(--title);
+}
+
+.heroSubtitleSpan::after {
   content: "";
   display: block;
   width: 100%;
