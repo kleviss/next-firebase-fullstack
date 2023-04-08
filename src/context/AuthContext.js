@@ -16,6 +16,14 @@ export const AuthContextProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+
+        // Lookup the user associated with the specified uid.
+        getAuth()
+          .getUser(user.uid)
+          .then((userRecord) => {
+            // The claims can be accessed on the user record.
+            console.log("kaka", userRecord.customClaims["hasPremium"]);
+          });
       } else {
         setUser(null);
       }
@@ -27,7 +35,26 @@ export const AuthContextProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider value={{ user }}>
-      {loading ? <div>Loading...</div> : children}
+      {loading ? (
+        <div
+          style={{
+            // position this emelent in the center of the screen
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            // style the text
+            fontSize: "1.2rem",
+            fontWeight: "bold",
+            fontFamily: "sans-serif",
+            color: "var(--color-primary)",
+          }}
+        >
+          Checking Authentication 🫣
+        </div>
+      ) : (
+        children
+      )}
     </AuthContext.Provider>
   );
 };

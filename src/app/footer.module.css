@@ -1,0 +1,92 @@
+.footer {
+  color: #fff;
+  padding: 10px 0;
+  width: var(--max-width);
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 6rem;
+}
+
+.about {
+  width: 43.33%;
+  padding-right: 30px;
+}
+
+.about h3 {
+  margin-top: 0;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.social {
+  display: flex;
+  font-size: 24px;
+}
+
+.social a {
+  color: #fff;
+  margin-right: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.social a:hover {
+  color: #f1c40f;
+}
+
+.links {
+  width: 23.33%;
+  padding-right: 40px;
+}
+
+.links h3 {
+  margin-top: 0;
+}
+
+.links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links a {
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.links a:hover {
+  color: #f1c40f;
+}
+
+.contact {
+  width: 33.33%;
+}
+
+.contact h3 {
+  margin-top: 0;
+}
+
+.contact ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}

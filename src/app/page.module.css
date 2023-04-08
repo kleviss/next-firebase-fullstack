@@ -180,8 +180,8 @@
   }
 }
 
-/* Mobile and Tablet */
-@media (max-width: 1023px) {
+/*Mobile*/
+@media (max-width: 725px) {
   .content {
     padding: 4rem;
   }
@@ -200,7 +200,7 @@
     text-align: center;
   }
 
-  .headGrid img {
+  .heroImage {
     display: none;
   }
 
@@ -281,11 +281,117 @@
   }
 }
 
+/*Tablet and Small Desktops */
+@media (max-width: 1180px) and (min-width: 726px) {
+  .content {
+    padding: 2rem;
+  }
+
+  .headGrid {
+    margin-bottom: 126px;
+    grid-template-columns: repeat(1, minmax(100%, auto));
+    text-align: center;
+  }
+
+  .heroTitleSpan {
+    font-size: 2.6rem !important;
+  }
+
+  .subtitleSpan {
+    font-size: 1rem !important;
+  }
+
+  .button {
+    font-size: 1.2rem !important;
+    padding: 0.4rem 1.2rem !important;
+  }
+
+  .heroImage {
+    margin-top: 2rem;
+    margin-left: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .headGrid p {
+    padding: 0 1rem;
+  }
+
+  .headGrid .button {
+    margin-left: -20px;
+  }
+
+  .card {
+    padding: 1rem 2.5rem;
+  }
+
+  .card h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .center {
+    padding: 8rem 0 6rem;
+  }
+
+  .center::before {
+    transform: none;
+    height: 300px;
+  }
+
+  .description {
+    font-size: 0.6rem;
+  }
+
+  .description a {
+    padding: 1rem;
+  }
+
+  .description p,
+  .description div {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+  }
+
+  .description p {
+    align-items: center;
+    inset: 0 0 auto;
+    padding: 2rem 1rem 1.4rem;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
+    background: linear-gradient(
+      to bottom,
+      rgba(var(--background-start-rgb), 1),
+      rgba(var(--callout-rgb), 0.5)
+    );
+    background-clip: padding-box;
+    backdrop-filter: blur(24px);
+  }
+
+  .description div {
+    align-items: flex-end;
+    pointer-events: none;
+    inset: auto 0 0;
+    padding: 2rem;
+    height: 200px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgb(var(--background-end-rgb)) 40%
+    );
+    z-index: 1;
+  }
+}
+
 .titleSpan {
   display: inline-block;
   margin-right: 0.5rem;
   font-size: 4rem;
-  font-weight: 600;
   color: var(--title);
 }
 
@@ -389,4 +495,18 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
