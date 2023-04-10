@@ -1,0 +1,19 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Hyrje Forex, pa dalje",
+      "videoUrl": "https://www.youtube.com/watch?v=7CqJlxBYj-M"
+    },
+    {
+      "id": 2,
+      "title": "Menaxhim Risku",
+      "videoUrl": "https://www.youtube.com/watch?v=xPZoHsaRVzM"
+    },
+    {
+      "id": 3,
+      "title": "Fibonaci, rob zoti",
+      "videoUrl": "https://www.youtube.com/watch?v=mxK8b99iJTg"
+    }
+  ]
+}
