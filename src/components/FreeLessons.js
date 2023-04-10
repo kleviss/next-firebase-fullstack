@@ -18,6 +18,11 @@ const FreeLessons = () => {
       title: "fibonaci, esht me lek, mvje keq ;)",
       videoUrl: "https://www.youtube.com/watch?v=mxK8b99iJTg",
     },
+    {
+      id: 4,
+      title: "Tutorial per genin",
+      videoUrl: "https://www.youtube.com/watch?v=mxK8b99iJTg",
+    },
   ]);
 
   return (
