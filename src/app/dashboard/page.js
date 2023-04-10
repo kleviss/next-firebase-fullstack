@@ -18,11 +18,11 @@ const PaidLessonsPage = ({ lessons }) => {
     if (user == null)
       // Redirect the user to the login page or homepage after 2 seconds
       setTimeout(() => router.push("/login"), 2000);
-    if (user?.reloadUserInfo != null) {
+    if (user && user.reloadUserInfo && user.reloadUserInfo.customAttributes) {
       const customAttributes = JSON.parse(user.reloadUserInfo.customAttributes);
       setHasPremium(customAttributes.hasPremium);
     }
-  }, [user]);
+  }, [router, user]);
 
   const handleSignOut = async () => {
     const { error } = await signOutUser();
