@@ -2,6 +2,8 @@
 import React from "react";
 
 const FreeLessons = () => {
+  console.log("FreeLessons");
+
   const [lessons, setLessons] = React.useState([
     {
       id: 1,
