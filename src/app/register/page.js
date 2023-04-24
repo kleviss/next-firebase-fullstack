@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { useAuthContext } from "@/context/AuthContext";
 import Link from "next/link";
 import { setCustomUserClaims } from "firebase/auth";
+import "./register.css";
+import styles from "../../app/page.module.css";
 
 const RegisterPage = () => {
   const [email, setEmail] = React.useState("");
@@ -25,10 +27,25 @@ const RegisterPage = () => {
     return router.push("/dashboard");
   };
   return (
-    <div className="wrapper">
-      <div className="form-wrapper">
-        <h1 className="mt-60 mb-30">Regjistrohu</h1>
+    <div className="area">
+      <ul className="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    </ul>
+                    <main className={styles.main}>
+       <div className="login_background">
+      
+        <p1 className="form-title">Regjistrohu</p1>
         <form onSubmit={handleForm} className="form">
+        <div class="input-container">
           <label htmlFor="email">
             <p>Email</p>
             <input
@@ -40,6 +57,8 @@ const RegisterPage = () => {
               placeholder="example@mail.com"
             />
           </label>
+          </div>
+          <div class="input-container">
           <label htmlFor="password">
             <p>Password</p>
             <input
@@ -51,11 +70,14 @@ const RegisterPage = () => {
               placeholder="password"
             />
           </label>
-          <button type="submit">Register</button>
+          </div>
+          <button type="submit" className="submit">Register</button>
           <Link href="/"> Faqja Kryesore </Link>
         </form>
       </div>
+    </main>
     </div>
+  
   );
 };
 

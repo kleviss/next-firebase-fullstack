@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import styles from "../../app/page.module.css";
 import { useAuthContext } from "@/context/AuthContext";
 import Link from "next/link";
+import "./login.css";
+
 
 const LoginPage = () => {
   const [email, setEmail] = React.useState("");
@@ -31,11 +33,27 @@ const LoginPage = () => {
   };
 
   return (
-    <main className={styles.main}>
-      <div className="wrapper">
-        <div className="form-wrapper">
-          <h1 className="mt-60 mb-30">Login</h1>
+    <div className="area">
+      <ul className="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    </ul>
+              <main className={styles.main}>
+     <div className="login_background">
+      <p class="form-title">Logohu tek llogaria</p>
+      
+      
+          
           <form onSubmit={handleForm} className="form">
+          <div class="input-container">
             <label htmlFor="email">
               <p>Email</p>
               <input
@@ -46,7 +64,10 @@ const LoginPage = () => {
                 id="email"
                 placeholder="example@mail.com"
               />
+             
             </label>
+            </div>
+            <div class="input-container">
             <label htmlFor="password">
               <p>Password</p>
               <input
@@ -58,16 +79,22 @@ const LoginPage = () => {
                 placeholder="password"
               />
             </label>
-            <button type="submit">Log in</button>
+            </div>
+            <button type="submit" className="submit">Log in</button>
             <Link href="/"> Faqja Kryesore </Link> <br /> <br />
+            <p class="signup-link">
             <Link href="/register">
               Nuk ke akoma llogari? Regjistrohu pra ca pret{" "}
             </Link>
+            </p>
           </form>
         </div>
-      </div>
+      
+     
     </main>
+    </div>
   );
+ 
 };
 
 export default LoginPage;
