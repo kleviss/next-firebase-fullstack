@@ -46,10 +46,10 @@ const LoginPage = () => {
                     <li></li>
                     <li></li>
                     </ul>
-    <main className={styles.main}>
+              <main className={styles.main}>
      <div className="login_background">
       <p class="form-title">Logohu tek llogaria</p>
-      <div class="input-container">
+      
       
           
           <form onSubmit={handleForm} className="form">
@@ -89,7 +89,7 @@ const LoginPage = () => {
             </p>
           </form>
         </div>
-      </div> 
+      
      
     </main>
     </div>
