@@ -6,7 +6,7 @@ import styles from "../../app/page.module.css";
 import FreeLessons from "@/components/FreeLessons";
 import Link from "next/link";
 
-const FreeLessonsPage = ({ lessons }) => {
+const FreeLessonsPage = () => {
   const router = useRouter();
 
   return (
@@ -16,7 +16,7 @@ const FreeLessonsPage = ({ lessons }) => {
           <h1>Mesime pa lek</h1>
           <Link href="/"> Faqja Kryesore </Link>
         </div>
-        <FreeLessons lessons={lessons} />
+        <FreeLessons />
       </>
     </main>
   );
