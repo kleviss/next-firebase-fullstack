@@ -9,7 +9,7 @@ import Link from "next/link";
 import PayPerView from "../../components/PayPerView";
 import loadingStyles from "../loading.module.css";
 
-const PaidLessonsPage = ({ lessons }) => {
+const PaidLessonsPage = () => {
   const { user } = useAuthContext();
   const router = useRouter();
 
@@ -47,7 +47,7 @@ const PaidLessonsPage = ({ lessons }) => {
             <Link href="/"> Faqja Kryesore </Link>
           </div>
 
-          {hasPremium ? <PaidLessons lessons={lessons} /> : <PayPerView />}
+          {hasPremium ? <PaidLessons /> : <PayPerView />}
         </>
       )}
 
