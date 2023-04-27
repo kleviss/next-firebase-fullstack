@@ -32,9 +32,6 @@ const LessonCard = ({ lesson }) => {
       {isOpen && (
         <div className={styles.modal} onClick={handleCloseModal}>
           <div className={styles.modalContent}>
-            <div className={styles.modalHeader}>
-              <h2>{lesson.title}</h2>
-            </div>
             {
               // iframe for video player
               <iframe
@@ -48,8 +45,22 @@ const LessonCard = ({ lesson }) => {
             }
             <button
               onClick={() => setIsOpen(false)}
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4"
+              className="bg-red-500 hover:bg-red-700 text-white font-bold ml-6"
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 inline-block mr-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
               Close
             </button>
           </div>
