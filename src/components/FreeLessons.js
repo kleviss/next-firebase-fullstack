@@ -13,7 +13,8 @@ const FreeLessons = () => {
       createdOn: "2020-10-10",
       authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
       category: "FOREX",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
     },
     {
       id: 2,
@@ -25,8 +26,8 @@ const FreeLessons = () => {
       createdOn: "2020-10-10",
       authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
       category: "FOREX",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
-
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
     },
     {
       id: 3,
@@ -38,7 +39,8 @@ const FreeLessons = () => {
       createdOn: "2020-10-10",
       authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
       category: "CRYPTO",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
     },
     {
       id: 2,
@@ -50,8 +52,8 @@ const FreeLessons = () => {
       createdOn: "2020-10-10",
       authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
       category: "FOREX",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
-
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
     },
     {
       id: 3,
@@ -63,8 +65,10 @@ const FreeLessons = () => {
       createdOn: "2020-10-10",
       authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
       category: "CRYPTO",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
-    },  {
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
+    },
+    {
       id: 2,
       title: "Menaxho rrezikun o cun",
       videoUrl: "https://www.youtube.com/watch?v=xPZoHsaRVzM",
@@ -74,8 +78,8 @@ const FreeLessons = () => {
       createdOn: "2020-10-10",
       authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
       category: "FOREX",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
-
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
     },
     {
       id: 3,
@@ -87,7 +91,8 @@ const FreeLessons = () => {
       createdOn: "2020-10-10",
       authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
       category: "CRYPTO",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
     },
 
     {
@@ -100,8 +105,8 @@ const FreeLessons = () => {
       createdOn: "2020-10-10",
       authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
       category: "FOREX",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
-
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
     },
     {
       id: 2,
@@ -113,21 +118,23 @@ const FreeLessons = () => {
       createdOn: "2020-10-10",
       authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
       category: "FOREX",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
-
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
     },
-
   ]);
 
   return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-20 grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <h1 className="text-3xl font-bold text-gray-900 col-span-2">Mesime Pa Lek</h1>
+    <>
+      <h1 className="text-center text-3xl font-bold pt-20 text-black">
+        Mësime falas
+      </h1>
+
+      <div className="pt-10 grid xl:grid-cols-2 md: grid-cols-1 gap-4 lg:mr-48 lg:ml-48">
         {lessons.map((lesson) => (
-            <LessonCard key={lesson.id} lesson={lesson} />
+          <LessonCard key={lesson.id} lesson={lesson} />
         ))}
       </div>
-
-
+    </>
   );
 };
 
