@@ -64,6 +64,7 @@ const LessonCard = ({ lesson }) => {
             <img
               src={lesson.imageUrl}
               className="h-48 w-full object-cover md:h-full md:w-48 hover:opacity-75"
+              alt="Lesson"
             />
             <div className={styles.duration}>{lesson.duration}</div>
             <div className={styles.details}>{lesson.views} views</div>

@@ -2,10 +2,8 @@
 import React from "react";
 import signIn from "@/firebase/auth/signin";
 import { useRouter } from "next/navigation";
-import styles from "../../app/page.module.css";
 import { useAuthContext } from "@/context/AuthContext";
 import Link from "next/link";
-import FreeLessons from "@/components/FreeLessons";
 
 const LoginPage = () => {
   const router = useRouter();

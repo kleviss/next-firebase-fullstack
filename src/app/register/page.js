@@ -2,9 +2,7 @@
 import React from "react";
 import signUp from "@/firebase/auth/signup";
 import { useRouter } from "next/navigation";
-import { useAuthContext } from "@/context/AuthContext";
 import Link from "next/link";
-import { setCustomUserClaims } from "firebase/auth";
 
 const RegisterPage = () => {
   const [email, setEmail] = React.useState("");
