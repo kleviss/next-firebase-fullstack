@@ -3,10 +3,8 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import FreeLessons from "@/components/FreeLessons";
 import Link from "next/link";
-import { Popover } from '@headlessui/react'
 
-
-const FreeLessonsPage = ({ lessons }) => {
+const FreeLessonsPage = () => {
   const router = useRouter();
 
   return (
@@ -36,7 +34,7 @@ const FreeLessonsPage = ({ lessons }) => {
 
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-6">
-          <FreeLessons lessons={lessons} />
+          <FreeLessons />
         </div>
 
       </main>

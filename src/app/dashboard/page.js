@@ -7,8 +7,9 @@ import signOutUser from "@/firebase/auth/signout";
 import PaidLessons from "@/components/PaidLessons";
 import Link from "next/link";
 import PayPerView from "../../components/PayPerView";
+import loadingStyles from "../loading.module.css";
 
-const PaidLessonsPage = ({ lessons }) => {
+const PaidLessonsPage = () => {
   const { user } = useAuthContext();
   const router = useRouter();
 
@@ -17,7 +18,8 @@ const PaidLessonsPage = ({ lessons }) => {
   React.useEffect(() => {
     if (user == null)
       // Redirect the user to the login page or homepage after 2 seconds
-      setTimeout(() => router.push("/login"), 2000);
+      // setTimeout(() => router.push("/login"), 2000);
+      router.push("/login");
     if (user && user.reloadUserInfo && user.reloadUserInfo.customAttributes) {
       const customAttributes = JSON.parse(user.reloadUserInfo.customAttributes);
       setHasPremium(customAttributes.hasPremium);
@@ -45,14 +47,14 @@ const PaidLessonsPage = ({ lessons }) => {
             <Link href="/"> Faqja Kryesore </Link>
           </div>
 
-          {hasPremium ? <PaidLessons lessons={lessons} /> : <PayPerView />}
+          {hasPremium ? <PaidLessons /> : <PayPerView />}
         </>
       )}
 
       {!user && (
-        <div>
-          <h1>mduket sikur sje identifikuar</h1>
-          <h2> fut icik email dhe password ke faqja tjeter ;) </h2>
+        <div className={loadingStyles.wrapper}>
+          Checking Authentication...
+          <div className={loadingStyles.ring} />
         </div>
       )}
     </main>
