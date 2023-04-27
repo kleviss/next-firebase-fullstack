@@ -18,7 +18,7 @@ const PayPerView = () => {
         <path d="M7 12V7a5 5 0 0 1 10 0v5"></path>
       </svg>
       <h1 className="text-white text-3xl font-bold mb-4">Pay to View</h1>
-      <p className="text-white text-lg text-center mr-24 ml-24 lg: p-32">
+      <p className="text-white text-lg text-center mr-24 ml-24">
         Mesa duket pagesa juaj nuk është procesuar ende. Për të parë këto video
         duhet më parë të abonoheni. Nëse jeni abonuar dhe nuk mund të shihni
         video, ju lutem na dërgoni një mesazh në Telegram.
