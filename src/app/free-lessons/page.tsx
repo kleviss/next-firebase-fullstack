@@ -9,7 +9,7 @@ const FreeLessonsPage = () => {
 
   return (
     <main className="bg-gray-100 min-h-screen">
-      <NavTop />
+      <NavTop user={null} />
       <FreeLessons />
     </main>
   );

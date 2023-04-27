@@ -129,7 +129,7 @@ const FreeLessons = () => {
         Mësime falas
       </h1>
 
-      <div className="pt-10 grid xl:grid-cols-2 md: grid-cols-1 gap-4 lg:mr-48 lg:ml-48">
+      <div className="pt-10 grid xl:grid-cols-2 md: grid-cols-1 gap-4 lg:mr-48 lg:ml-48 pb-20">
         {lessons.map((lesson) => (
           <LessonCard key={lesson.id} lesson={lesson} />
         ))}

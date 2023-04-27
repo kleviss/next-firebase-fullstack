@@ -63,7 +63,7 @@ const LessonCard = ({ lesson }) => {
           <div className="md:shrink-0 relative">
             <img
               src={lesson.imageUrl}
-              className="h-48 w-full object-cover md:h-full md:w-48"
+              className="h-48 w-full object-cover md:h-full md:w-48 hover:opacity-75"
             />
             <div className={styles.duration}>{lesson.duration}</div>
             <div className={styles.details}>{lesson.views} views</div>
