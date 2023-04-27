@@ -64,6 +64,57 @@ const FreeLessons = () => {
       authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
       category: "CRYPTO",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
+    },  {
+      id: 2,
+      title: "Menaxho rrezikun o cun",
+      videoUrl: "https://www.youtube.com/watch?v=xPZoHsaRVzM",
+      imageUrl: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
+      duration: "5:30",
+      views: 200,
+      createdOn: "2020-10-10",
+      authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
+      category: "FOREX",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
+
+    },
+    {
+      id: 3,
+      title: "Fibonaci, esht me lek, mvje keq ;)",
+      videoUrl: "https://www.youtube.com/watch?v=mxK8b99iJTg",
+      imageUrl: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
+      duration: "6:30",
+      views: 300,
+      createdOn: "2020-10-10",
+      authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
+      category: "CRYPTO",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
+    },
+
+    {
+      id: 2,
+      title: "Menaxho rrezikun o cun",
+      videoUrl: "https://www.youtube.com/watch?v=xPZoHsaRVzM",
+      imageUrl: "https://i.ytimg.com/vi/mxK8b99iJTg/maxresdefault.jpg",
+      duration: "5:30",
+      views: 200,
+      createdOn: "2020-10-10",
+      authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
+      category: "FOREX",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
+
+    },
+    {
+      id: 2,
+      title: "Menaxho rrezikun o cun",
+      videoUrl: "https://www.youtube.com/watch?v=xPZoHsaRVzM",
+      imageUrl: "https://i.ytimg.com/vi/mxK8b99iJTg/maxresdefault.jpg",
+      duration: "5:30",
+      views: 200,
+      createdOn: "2020-10-10",
+      authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
+      category: "FOREX",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
+
     },
 
   ]);

@@ -84,3 +84,62 @@
     font-weight: bold;
 }
 
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+}
+
+.modalContent {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    max-width: 800px;
+    max-height: 600px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @apply text-base font-medium text-gray-900 sm:text-xl bg-blue-50;
+}
+
+.modalContent iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.modalContent button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    z-index: 11;
+
+}
+
+.lessonCard {
+    @apply max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl cursor-pointer;
+}
