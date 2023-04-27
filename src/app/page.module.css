@@ -392,7 +392,6 @@
   display: inline-block;
   margin-right: 0.5rem;
   font-size: 4rem;
-  color: var(--title);
 }
 
 .heroTitleSpan {
@@ -400,7 +399,6 @@
   margin-right: 0.5rem;
   font-size: 4rem;
   font-weight: 600;
-  color: var(--title);
 }
 
 .titleSpan::after {
@@ -409,7 +407,6 @@
   width: 100%;
   height: 2px;
   margin-top: 0.5rem;
-  background: var(--title);
 }
 .heroSubtitleSpan::after {
   content: "";
@@ -417,7 +414,6 @@
   width: 100%;
   height: 2px;
   margin-top: 0.5rem;
-  background: var(--title);
 }
 
 .subtitleSpan {
@@ -425,7 +421,6 @@
   margin-right: 0.5rem;
   font-size: 1.6rem;
   font-weight: 300;
-  color: var(--title);
 }
 
 .heroSubtitleSpan {
@@ -433,7 +428,6 @@
   margin-right: 0.5rem;
   font-size: 1.2rem;
   font-weight: 300;
-  color: var(--title);
   margin-top: 10px;
   padding-right: 10px;
 }
@@ -444,7 +438,6 @@
   width: 100%;
   height: 2px;
   margin-top: 0.5rem;
-  background: var(--title);
 }
 
 .heroSubtitleSpan::after {
@@ -453,7 +446,6 @@
   width: 100%;
   height: 2px;
   margin-top: 0.5rem;
-  background: var(--title);
 }
 
 .button {
