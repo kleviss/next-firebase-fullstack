@@ -5,7 +5,6 @@ import signOutUser from "@/firebase/auth/signout";
 import { useRouter } from "next/navigation";
 
 const NavTop = ({ user }) => {
-  console.log("user from navtop", user);
   const router = useRouter();
 
   const handleSignOut = async () => {

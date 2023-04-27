@@ -56,7 +56,7 @@ const LessonCard = ({ lesson }) => {
         </div>
       )}
       <div
-        className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl cursor-pointer"
+        className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl cursor-pointer hover:shadow-lg"
         onClick={() => setIsOpen(true)}
       >
         <div className="md:flex">
