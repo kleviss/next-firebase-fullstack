@@ -11,10 +11,21 @@ interface ArticlePageProps {
 
 const ArticlePage = ({ params }: ArticlePageProps) => {
   return (
-    <main>
-      <h1> Article {params.id} </h1>
+    <main className="bg-gray-100 min-h-screen">
+      <h1
+        className={
+          "text-4xl text-center font-medium text-black hover:text-gray-900"
+        }
+      >
+        {" "}
+        Article {params.id}{" "}
+      </h1>
 
-      <p>
+      <p
+        className={
+          "text-4xl text-center font-medium text-gray-500 hover:text-gray-900"
+        }
+      >
         <Link href={"/articles"}> Back to Articles </Link>
       </p>
     </main>

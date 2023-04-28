@@ -66,7 +66,7 @@ const LandingPageBottomActions = () => {
         </p>
       </Link>
 
-      <Link href="/" className={styles.card} rel="noopener noreferrer">
+      <Link href="/articles" className={styles.card} rel="noopener noreferrer">
         <h2 className={inter.className}>
           Artikuj Teknik{" "}
           <span>
