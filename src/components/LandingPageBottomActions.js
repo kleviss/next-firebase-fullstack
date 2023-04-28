@@ -36,6 +36,7 @@ const LandingPageBottomActions = () => {
         </h2>
         <p className={inter.className}>
           Mesime falas per te gjithe qe deshiron te futen ne boten e Forex-it
+          dhe per te mesuar
         </p>
       </Link>
 
@@ -61,13 +62,13 @@ const LandingPageBottomActions = () => {
         </h2>
         <p className={inter.className}>
           Analizat teknike dhe pergatitje e avancuar per te bere i suksesshem ne
-          forex
+          forex dhe per te bere para
         </p>
       </Link>
 
       <Link href="/" className={styles.card} rel="noopener noreferrer">
         <h2 className={inter.className}>
-          Analiza Teknike{" "}
+          Artikuj Teknik{" "}
           <span>
             <svg
               className="h-5 w-5 inline-block ml-1 pb-0.5"
@@ -87,7 +88,7 @@ const LandingPageBottomActions = () => {
         </h2>
         <p className={inter.className}>
           Shpjegimi i disa koncepteve bazike te menyres sesi funksionon analiza
-          teknike
+          teknike plus artikuj te ndryshem nga bota e forex-it
         </p>
       </Link>
     </div>
