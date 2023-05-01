@@ -36,7 +36,7 @@ const LandingPageBottomActions = () => {
         </h2>
         <p className={inter.className}>
           Mesime falas per te gjithe qe deshiron te futen ne boten e Forex-it
-          dhe per te mesuar
+          dhe per te mesuar me shume
         </p>
       </Link>
 

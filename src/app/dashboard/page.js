@@ -30,7 +30,7 @@ const PaidLessonsPage = () => {
     <main className="bg-gray-100 min-h-screen">
       {user && (
         <>
-          {hasPremium ? (
+          {!hasPremium ? (
             <main className="bg-gray-100 min-h-screen">
               <NavTop user={{ user }} />
               <h1 className="text-center text-2xl pt-20 text-black">
