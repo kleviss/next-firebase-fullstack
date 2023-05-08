@@ -5,9 +5,8 @@ import { useRouter } from "next/navigation";
 import PaidLessons from "@/components/PaidLessons";
 import loadingStyles from "../loading.module.css";
 import NavTop from "../../components/NavTop";
-import { paidLessons } from "../../../public/static/paid-lessons";
 
-const PaidLessonsPage = () => {
+const AdminPage = () => {
   const { user } = useAuthContext();
   const router = useRouter();
 
@@ -31,7 +30,7 @@ const PaidLessonsPage = () => {
       {user && (
         <main className="bg-gray-100 min-h-full">
           <NavTop user={user} href={"/dashboard"} />
-          <PaidLessons lessons={paidLessons} />
+          <PaidLessons lessons={lessons} />
         </main>
       )}
 
@@ -45,4 +44,4 @@ const PaidLessonsPage = () => {
   );
 };
 
-export default PaidLessonsPage;
+export default AdminPage;

@@ -1,8 +1,6 @@
-import React, { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import React from "react";
 import LessonCard from "@/components/LessonCard";
-import Link from "next/link";
+import { freeLessons } from "../../public/static/free-lessons";
 
 const data = [
   {
