@@ -40,7 +40,7 @@ const PaidLessons = () => {
       authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
       category: "CRYPTO",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt tincidunt tincidunt tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
     },
     {
       id: 2,
@@ -125,11 +125,7 @@ const PaidLessons = () => {
 
   return (
     <>
-      <h1 className="text-center text-3xl font-bold pt-20 text-black">
-        Mësime premium
-      </h1>
-
-      <div className="pt-10 grid xl:grid-cols-2 md: grid-cols-1 gap-4 lg:mr-48 lg:ml-48 pb-20">
+      <div>
         {lessons.map((lesson) => (
           <LessonCard key={lesson.id} lesson={lesson} />
         ))}

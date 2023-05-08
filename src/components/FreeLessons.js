@@ -128,8 +128,11 @@ const FreeLessons = () => {
       <h1 className="text-center text-3xl font-bold pt-20 text-black ">
         Mësime falas
       </h1>
-
-      <div className="m-5 pt-10 grid xl:grid-cols-2 md: grid-cols-1 gap-4 lg:mr-48 lg:ml-48 pb-20">
+      <p className="text-center text-gray-500 text-sm">
+        Nje koleksion i mësimeve falas për të gjithë ata që duan të fillojnë të
+        mësojnë për tregtinë e valutave.
+      </p>
+      <div className="m-5 pt-10 grid xl:grid-cols-2 md: grid-cols-1 gap-4 lg:mr-48 lg:ml-48 pb-10">
         {lessons.map((lesson) => (
           <LessonCard key={lesson.id} lesson={lesson} />
         ))}

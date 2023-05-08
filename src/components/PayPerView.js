@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 
 const PayPerView = () => {
   return (
@@ -23,9 +24,13 @@ const PayPerView = () => {
         duhet më parë të abonoheni. Nëse jeni abonuar dhe nuk mund të shihni
         video, ju lutem na dërgoni një mesazh në Telegram.
       </p>
-      <button className="bg-white text-red-500 hover:bg-black hover:text-white mt-8 py-2 px-4 rounded-lg font-medium transition duration-300 ">
-        Dërgo mesazh
-      </button>
+      <Link
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeOuU6-LL5nqqtZgIu7JPI6cVpEQk-fpCarkSSi24STWd9VpQ/viewform?usp=sf_link"
+        target="_blank"
+        className="bg-white text-red-500 hover:bg-black hover:text-white mt-8 py-2 px-4 rounded-lg font-medium transition duration-300"
+      >
+        Regjistrohu
+      </Link>
     </div>
   );
 };

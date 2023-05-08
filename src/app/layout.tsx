@@ -1,6 +1,8 @@
 "use client";
 import "./globals.css";
 import { AuthContextProvider } from "@/context/AuthContext";
+import Head from "@/app/head";
+import React from "react";
 
 export default function RootLayout({
   children,
@@ -9,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head />
+      <Head />
       <body>
         <AuthContextProvider>{children}</AuthContextProvider>
       </body>

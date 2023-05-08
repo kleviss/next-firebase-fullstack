@@ -35,8 +35,8 @@ const LessonCard = ({ lesson }) => {
             {
               // iframe for video player
               <iframe
-                width="560"
-                height="315"
+                width="660"
+                height="390"
                 src="https://www.youtube.com/embed/z1vPBc2h9pE"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -45,7 +45,7 @@ const LessonCard = ({ lesson }) => {
             }
             <button
               onClick={() => setIsOpen(false)}
-              className="bg-red-500 hover:bg-red-700 text-white font-bold ml-6"
+              className="hover:bg-red-700 text-white font-bold"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -61,13 +61,13 @@ const LessonCard = ({ lesson }) => {
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
-              Close
+              Mbyll Videon
             </button>
           </div>
         </div>
       )}
       <div
-        className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl cursor-pointer hover:shadow-lg"
+        className="bg-gray-800 rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-lg w-full mr-16"
         onClick={() => setIsOpen(true)}
       >
         <div className="md:flex">
@@ -87,7 +87,7 @@ const LessonCard = ({ lesson }) => {
             </div>
             <a
               href={lesson.video}
-              className="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
+              className="block mt-1 text-lg leading-tight font-medium text-white hover:underline"
             >
               {lesson.title}
             </a>
