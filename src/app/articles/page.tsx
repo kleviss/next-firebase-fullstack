@@ -13,7 +13,7 @@ const ArticlesPage = () => {
 
   return (
     <main className="bg-gray-100 min-h-screen">
-      <NavTop user={null} />
+      <NavTop user={null} href={"/articles"} />
       <h1 className=" px-30 py-20 ">
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
           <p
