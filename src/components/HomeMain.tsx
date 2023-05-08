@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Image from "next/image";
 
 const navigation = [
   { name: "Kursi falas", href: "/free-lessons" },
@@ -24,7 +25,7 @@ export default function HomeMain() {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
+              <Image
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
@@ -55,7 +56,7 @@ export default function HomeMain() {
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
-              href="/dashboard"
+              href={"/dashboard"}
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               Log in <span aria-hidden="true">&rarr;</span>
@@ -73,7 +74,7 @@ export default function HomeMain() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
+                <Image
                   className="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                   alt=""
@@ -102,12 +103,12 @@ export default function HomeMain() {
                   ))}
                 </div>
                 <div className="py-6">
-                  <a
-                    href="#"
+                  <Link
+                    href={"/dashboard"}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Log in
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -168,25 +169,22 @@ export default function HomeMain() {
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                  ></path>
+                  <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
                 </svg>
               </button>
-              <a
-                href="#"
+              <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeOuU6-LL5nqqtZgIu7JPI6cVpEQk-fpCarkSSi24STWd9VpQ/viewform"
+                target="_blank"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Rregjistrohu tani
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href={"/dashboard"}
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
-                Më shumë <span aria-hidden="true">→</span>
-              </a>
+                Log in <span aria-hidden="true">→</span>
+              </Link>
             </div>
           </div>
         </div>
