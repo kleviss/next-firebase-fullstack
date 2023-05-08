@@ -66,35 +66,23 @@ const LessonCard = ({ lesson }) => {
           </div>
         </div>
       )}
-      <div
-        className="bg-gray-800 rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-lg w-full mr-16"
-        onClick={() => setIsOpen(true)}
-      >
-        <div className="md:flex">
+
+      <div className="cursor-pointer" onClick={() => setIsOpen(true)}>
+        <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
           <div className="md:shrink-0 relative">
             <img
-              src={lesson.imageUrl}
-              className="h-48 w-full object-cover md:h-full md:w-48 hover:opacity-75"
-              alt="Lesson"
+              src={lesson.imageSrc}
+              alt={lesson.imageAlt}
+              className="h-full w-full object-cover object-center group-hover:opacity-75"
             />
             <div className={styles.duration}>{lesson.duration}</div>
             <div className={styles.details}>{lesson.views} views</div>
           </div>
-
-          <div className="p-8">
-            <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-              {lesson.category}
-            </div>
-            <a
-              href={lesson.video}
-              className="block mt-1 text-lg leading-tight font-medium text-white hover:underline"
-            >
-              {lesson.title}
-            </a>
-
-            <p className="mt-2 text-slate-500">{lesson.description}</p>
-          </div>
         </div>
+        <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold mt-4">
+          {lesson.category}
+        </div>
+        <p className="mt-1 text-lg font-medium text-gray-900">{lesson.title}</p>
       </div>
     </>
   );

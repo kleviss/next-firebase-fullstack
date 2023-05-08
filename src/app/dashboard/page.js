@@ -10,6 +10,7 @@ import LessonCard from "../../components/LessonCard";
 import Image from "next/image";
 import styles from "../page.module.css";
 import signOutUser from "../../firebase/auth/signout";
+import FreeLessons from "../../components/FreeLessons";
 
 const PaidLessonsPage = () => {
   const { user } = useAuthContext();
@@ -114,14 +115,10 @@ const PaidLessonsPage = () => {
   return (
     <>
       {user && (
-        <>
-          <div className="flex h-screen">
-            <Sidebar />
-            <div className="flex flex-col flex-1 h-full">
-              <MainContent lessons={lessons} hasPremium={hasPremium} />
-            </div>
-          </div>
-        </>
+        <main className="bg-gray-100 min-h-full">
+          <NavTop user={user} href={"/dashboard"} />
+          <PaidLessons lessons={lessons} />
+        </main>
       )}
 
       {!user && (
@@ -136,77 +133,6 @@ const PaidLessonsPage = () => {
 
 export default PaidLessonsPage;
 
-const Sidebar = () => {
-  const router = useRouter();
-
-  const handleSignOut = async () => {
-    const { error } = await signOutUser();
-    if (error) {
-      console.log("Error signing out:", error);
-    } else {
-      console.log("Successfully signed out");
-      // Redirect the user to the login page or homepage
-      router.push("/");
-    }
-  };
-
-  return (
-    <div className="bg-gray-800 text-white px-4 py-8 flex-none fixed top-6 left-6 bottom-6 rounded-2xl w-72">
-      <div className="pb-6">
-        <a
-          href="https://visionfx.cc/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="/visionfx-brardhe.png"
-            alt="VisionFX Logo"
-            className={styles.vercelLogo}
-            width={110}
-            height={45}
-            priority
-          />
-        </a>
-      </div>
-      {/* Sidebar content goes here */}
-      {[1, 2, 3, 4, 5, 6].map((item, idx) => (
-        // eslint-disable-next-line react/jsx-key
-        <div className="flex items-center space-x-2 mb-4">
-          <div className="w-10 h-10 bg-gray-700 rounded-full"></div>
-          <div className="w-36 h-6 bg-gray-700 rounded-full"></div>
-        </div>
-      ))}
-      <div className="mt-16">
-        <button
-          className="font-medium text-gray-500 hover:text-white px-3 py-2 rounded-md text-sm"
-          onClick={handleSignOut}
-        >
-          Logout
-        </button>
-      </div>
-    </div>
-  );
-};
-
-const Navbar = () => {
-  return (
-    <nav className="bg-gray-800 text-white flex-none fixed top-6 left-96 rounded-2xl py-3 px-2 z-20 shadow-md overflow-hidden cursor-pointer hover:shadow-lg w-full pr-96 mr-96">
-      {/* Navbar content goes here */}
-      <div className="flex items-center space-x-4">
-        <div className="w-10 h-10 bg-gray-700 rounded-full"></div>
-        <div className="w-36 h-6 bg-gray-700 rounded-full"></div>
-        <div className="w-20 h-6 bg-gray-700 rounded-full"></div>
-
-        <div className="flex-1"></div>
-
-        <div className="w-64 h-6 bg-gray-700 rounded-full"></div>
-        <div className="w-10 h-10 bg-gray-700 rounded-full"></div>
-        <div className="w-10 h-10 bg-gray-700 rounded-full"></div>
-      </div>
-    </nav>
-  );
-};
-
 const Box = () => {
   return (
     <div className="bg-gray-800 h-64 w-72 m-5 rounded-2xl">
@@ -218,8 +144,6 @@ const Box = () => {
 const MainContent = ({ lessons, hasPremium }) => {
   return (
     <main className="flex-1 overflow-y-auto ml-96 pt-24">
-      <Navbar />
-
       {/* Main content goes here */}
       {!hasPremium ? (
         <>

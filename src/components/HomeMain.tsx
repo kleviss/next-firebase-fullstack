@@ -2,10 +2,11 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const navigation = [
-  { name: "Kursi falas", href: "#" },
-  { name: "Kursi me pagesë", href: "#" },
+  { name: "Kursi falas", href: "/free-lessons" },
+  { name: "Kursi me pagesë", href: "/dashboard" },
   { name: "Analiza Teknine", href: "#" },
   { name: "Kompania", href: "#" },
 ];
@@ -42,23 +43,23 @@ export default function HomeMain() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#"
+            <Link
+              href="/dashboard"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+            </Link>
           </div>
         </nav>
         <Dialog

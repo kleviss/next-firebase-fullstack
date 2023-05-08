@@ -8,7 +8,6 @@ const Home = () => {
   return (
     <>
       <HomeMain />
-
       <FeatureSection />
       <PricingSection />
       <BlogSection />
