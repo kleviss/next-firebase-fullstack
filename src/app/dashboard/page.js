@@ -31,7 +31,7 @@ const PaidLessonsPage = () => {
       {user && (
         <main className="bg-gray-100 min-h-full">
           <NavTop user={user} href={"/dashboard"} />
-          <PaidLessons lessons={paidLessons} />
+          <PaidLessons lessons={paidLessons} user={user} />
         </main>
       )}
 

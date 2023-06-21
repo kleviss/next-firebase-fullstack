@@ -12,7 +12,7 @@ const navigation = [
   { name: "Kompania", href: "#" },
 ];
 
-export default function HomeMain() {
+const HomeMain = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -27,7 +27,7 @@ export default function HomeMain() {
               <span className="sr-only">Your Company</span>
               <Image
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                 width={8}
                 height={8}
                 alt="logos"
@@ -78,7 +78,7 @@ export default function HomeMain() {
                 <span className="sr-only">Your Company</span>
                 <Image
                   className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                   width={8}
                   height={8}
                   alt="logos"
@@ -207,4 +207,6 @@ export default function HomeMain() {
       </div>
     </div>
   );
-}
+};
+
+export default HomeMain;

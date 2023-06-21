@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const LandingPageFooter = () => {
   return (
     <footer className="bg-white dark:bg-gray-900">
@@ -7,10 +9,12 @@ const LandingPageFooter = () => {
             href="https://flowbite.com/"
             className="flex items-center mb-4 sm:mb-0"
           >
-            <img
+            <Image
               src="https://flowbite.com/docs/images/logo.svg"
               className="h-8 mr-3"
               alt="Flowbite Logo"
+              width={28}
+              height={28}
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Flowbite

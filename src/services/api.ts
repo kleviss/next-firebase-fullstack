@@ -1,18 +1,17 @@
 import axios from "axios";
-import { NewsApiResponse } from "@/types/article";
+import { UserMap } from "@/types/metadata";
 
 const api = axios.create({
-  baseURL: "https://newsapi.org/v2",
+  baseURL: "https://klfx-lit-default-rtdb.europe-west1.firebasedatabase.app",
 });
 
-export const getBusinessNews = async () => {
+export const getRealtimeDatabaseMetadata = async () => {
   try {
-    const response = await api.get(
-      "top-headlines?country=us&category=business&apiKey=8f1ab3501814475ca43eefdc21a67a9c"
-    );
-    return response.data.articles;
+    const response = await api.get<UserMap>("/metadata.json");
+    console.log("Response from Realtime Database API", response);
+    return response.data;
   } catch (error) {
-    console.log("Error while calling getBusinessNews API", error);
+    console.log("Error while calling Realtime Database API", error);
     throw error;
   }
 };
