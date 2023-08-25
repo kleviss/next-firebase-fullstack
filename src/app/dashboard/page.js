@@ -2,18 +2,18 @@
 import React from "react";
 import { useAuthContext } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
-import styles from "../../app/page.module.css";
-import signOutUser from "@/firebase/auth/signout";
 import PaidLessons from "@/components/PaidLessons";
-import Link from "next/link";
-import PayPerView from "../../components/PayPerView";
 import loadingStyles from "../loading.module.css";
+import NavTop from "../../components/NavTop";
+import { paidLessons } from "../../../public/static/paid-lessons";
 
 const PaidLessonsPage = () => {
   const { user } = useAuthContext();
   const router = useRouter();
 
   const [hasPremium, setHasPremium] = React.useState(false);
+
+  console.log("hasPremium", hasPremium);
 
   React.useEffect(() => {
     if (user == null)
@@ -26,29 +26,13 @@ const PaidLessonsPage = () => {
     }
   }, [router, user]);
 
-  const handleSignOut = async () => {
-    const { error } = await signOutUser();
-    if (error) {
-      console.log("Error signing out:", error);
-    } else {
-      console.log("Successfully signed out");
-      // Redirect the user to the login page or homepage
-      router.push("/");
-    }
-  };
-
   return (
-    <main className={styles.main}>
+    <>
       {user && (
-        <>
-          <div>
-            <h1>Welcome {user.email}</h1>
-            <button onClick={handleSignOut}>Logout</button>
-            <Link href="/"> Faqja Kryesore </Link>
-          </div>
-
-          {hasPremium ? <PaidLessons /> : <PayPerView />}
-        </>
+        <main className="bg-gray-100 min-h-full">
+          <NavTop user={user} href={"/dashboard"} />
+          <PaidLessons lessons={paidLessons} user={user} />
+        </main>
       )}
 
       {!user && (
@@ -57,7 +41,7 @@ const PaidLessonsPage = () => {
           <div className={loadingStyles.ring} />
         </div>
       )}
-    </main>
+    </>
   );
 };
 

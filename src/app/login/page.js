@@ -2,17 +2,14 @@
 import React from "react";
 import signIn from "@/firebase/auth/signin";
 import { useRouter } from "next/navigation";
-import styles from "../../app/page.module.css";
 import { useAuthContext } from "@/context/AuthContext";
-import Link from "next/link";
-import FreeLessons from "@/components/FreeLessons";
+import AuthPageLayout from "@/components/AuthPageLayout";
+import GenericForm from "@/components/GenericForm";
 
 const LoginPage = () => {
   const router = useRouter();
   const { user } = useAuthContext();
 
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
   const [error, setError] = React.useState(null);
 
   React.useEffect(() => {
@@ -21,8 +18,7 @@ const LoginPage = () => {
     }
   }, [router, user]);
 
-  const handleSignIn = async (e) => {
-    e.preventDefault();
+  const handleSignIn = async (email, password) => {
     const { error } = await signIn(email, password);
     if (error) {
       setError(error.message);
@@ -32,36 +28,23 @@ const LoginPage = () => {
   };
 
   return (
-    <main className={styles.main}>
-      <div>
-        <h1>Login</h1>
-        <form onSubmit={handleSignIn}>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <div>
-            <button type="submit">Log in</button>
-            <br></br>
-            <Link href="/"> Faqja Kryesore </Link> <br /> <br />
-            <Link href="/register">
-              Nuk ke akoma llogari? Regjistrohu pra ca pret{" "}
-            </Link>
-          </div>{" "}
-        </form>
-        {error && <p>{error}</p>}
-      </div>
-    </main>
+    <AuthPageLayout>
+      {/* Page header */}
+      <h1 className="text-3xl font-semibold">VisionFX Academy</h1>
+      <div className="h-8"></div>
+      <h3 className="text-xl font-semibold mt-2">Login</h3>
+
+      {/* Form */}
+      <GenericForm
+        handleSubmit={handleSignIn}
+        buttonText="Login"
+        linkText="Sign up"
+        linkHref="/register"
+      />
+
+      <div className="h-4"></div>
+      {error && <p className="text-red-500">{error}</p>}
+    </AuthPageLayout>
   );
 };
 

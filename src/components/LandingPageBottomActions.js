@@ -16,34 +16,79 @@ const LandingPageBottomActions = () => {
         rel="noopener noreferrer"
       >
         <h2 className={inter.className}>
-          Mesime Falas <span>-&gt;</span>
+          Mesime Falas{" "}
+          <span>
+            <svg
+              className="h-5 w-5 inline-block ml-1 pb-0.5"
+              strokeWidth="3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </span>
         </h2>
         <p className={inter.className}>
           Mesime falas per te gjithe qe deshiron te futen ne boten e Forex-it
+          dhe per te mesuar me shume
         </p>
       </Link>
 
       <Link href="/dashboard" className={styles.card} rel="noopener noreferrer">
         <h2 className={inter.className}>
-          Kursi me pagese <span>-&gt;</span>
+          Kursi me pagese{" "}
+          <span>
+            <svg
+              className="h-5 w-5 inline-block ml-1 pb-0.5"
+              strokeWidth="3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </span>
         </h2>
         <p className={inter.className}>
           Analizat teknike dhe pergatitje e avancuar per te bere i suksesshem ne
-          forex
+          forex dhe per te bere para
         </p>
       </Link>
 
-      <Link
-        href="/tech-analysis"
-        className={styles.card}
-        rel="noopener noreferrer"
-      >
+      <Link href="/articles" className={styles.card} rel="noopener noreferrer">
         <h2 className={inter.className}>
-          Analiza Teknike <span>-&gt;</span>
+          Artikuj Teknik{" "}
+          <span>
+            <svg
+              className="h-5 w-5 inline-block ml-1 pb-0.5"
+              strokeWidth="3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </span>
         </h2>
         <p className={inter.className}>
           Shpjegimi i disa koncepteve bazike te menyres sesi funksionon analiza
-          teknike
+          teknike plus artikuj te ndryshem nga bota e forex-it
         </p>
       </Link>
     </div>

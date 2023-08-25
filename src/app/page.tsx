@@ -1,18 +1,17 @@
-import styles from "./page.module.css";
-import LandingPageHeader from "../components/LandingPageHeader";
-import LandingPageMainContent from "../components/LandingPageMainContent";
-import LandingPageBottomActions from "../components/LandingPageBottomActions";
-import LandingPageFooter from "../components/LandingPageFooter";
+import HomeMain from "@/components/HomeMain";
+import PricingSection from "@/components/PricingSection";
+import FeatureSection from "@/components/FeatureSection";
+import BlogSection from "@/components/BlogSection";
+import LandingPageFooter from "@/components/LandingPageFooter";
 
 const Home = () => {
   return (
     <>
-      <main className={styles.main}>
-        <LandingPageHeader />
-        <LandingPageMainContent />
-        <LandingPageBottomActions />
-      </main>
-      {/* <LandingPageFooter /> */}
+      <HomeMain />
+      <FeatureSection />
+      <PricingSection />
+      <BlogSection />
+      <LandingPageFooter />
     </>
   );
 };

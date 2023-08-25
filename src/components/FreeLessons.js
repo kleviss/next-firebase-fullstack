@@ -1,82 +1,50 @@
 import React from "react";
-import LessonCard from "./LessonCard";
+import LessonCard from "@/components/LessonCard";
+import BottomBlurBar from "@/components/BottomBlurBar";
+import { freeLessons } from "../../public/static/free-lessons";
 
 const FreeLessons = () => {
-  const [lessons, setLessons] = React.useState([
-    {
-      id: 1,
-      title: "Bej lek pa lek",
-      videoUrl: "https://www.youtube.com/watch?v=7CqJlxBYj-M",
-      imageUrl: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
-      duration: "1:30",
-      views: 100,
-      createdOn: "2020-10-10",
-      authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
-      category: "FOREX",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
-    },
-    {
-      id: 2,
-      title: "Menaxho rrezikun o cun",
-      videoUrl: "https://www.youtube.com/watch?v=xPZoHsaRVzM",
-      imageUrl: "https://i.ytimg.com/vi/mxK8b99iJTg/maxresdefault.jpg",
-      duration: "5:30",
-      views: 200,
-      createdOn: "2020-10-10",
-      authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
-      category: "FOREX",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
-
-    },
-    {
-      id: 3,
-      title: "Fibonaci, esht me lek, mvje keq ;)",
-      videoUrl: "https://www.youtube.com/watch?v=mxK8b99iJTg",
-      imageUrl: "https://i.ytimg.com/vi/mxK8b99iJTg/maxresdefault.jpg",
-      duration: "6:30",
-      views: 300,
-      createdOn: "2020-10-10",
-      authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
-      category: "CRYPTO",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
-    },
-    {
-      id: 2,
-      title: "Menaxho rrezikun o cun",
-      videoUrl: "https://www.youtube.com/watch?v=xPZoHsaRVzM",
-      imageUrl: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
-      duration: "5:30",
-      views: 200,
-      createdOn: "2020-10-10",
-      authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
-      category: "FOREX",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
-
-    },
-    {
-      id: 3,
-      title: "Fibonaci, esht me lek, mvje keq ;)",
-      videoUrl: "https://www.youtube.com/watch?v=mxK8b99iJTg",
-      imageUrl: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
-      duration: "6:30",
-      views: 300,
-      createdOn: "2020-10-10",
-      authorImage: "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
-      category: "CRYPTO",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ultricies, nunc nisl ultricies nunc, vitae luctus",
-    },
-
-  ]);
-
   return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-20 grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <h1 className="text-3xl font-bold text-gray-900 col-span-2">Mesime Pa Lek</h1>
-        {lessons.map((lesson) => (
-            <LessonCard key={lesson.id} lesson={lesson} />
-        ))}
+    <main className="relative pb-24 pt-16">
+      {freeLessons.map((course) => (
+        <>
+          <div
+            className="mx-auto max-w-7xl py-6 mobile:px-6 laptop:px-8"
+            key={course.courseName}
+          >
+            <div className="mx-auto max-w-2xl px-4 mobile:px-6 mobile:py-6 laptop:max-w-7xl laptop:px-8">
+              <h2 className="text-2xl text-black font-bold">
+                {course.courseName}
+              </h2>
+              {course.chapters.map((chapter) => (
+                <div
+                  key={chapter.title}
+                  className="mt-6 bg-white p-6 rounded-2xl"
+                >
+                  <h3 className="text-lg text-black font-bold pb-4">
+                    {chapter.title}
+                  </h3>
+                  <div className="grid grid-cols-1 gap-x-6 gap-y-10 mobile:grid-cols-1 laptop:grid-cols-3 desktop:grid-cols-4 desktop:gap-x-8">
+                    {chapter.lessons.map((lesson) => (
+                      <LessonCard lesson={lesson} key={lesson.title} />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </>
+      ))}
+      {/* space between content and footer */}
+      <div className="h-6"></div>
+      <div className="fixed bottom-0 left-0 w-full z-2">
+        {/* add blur effect and spread */}
+        <BottomBlurBar
+          text="Merr akses në të gjitha leksionet"
+          buttonText="Abonohu"
+        />
       </div>
-
-
+    </main>
   );
 };
 
