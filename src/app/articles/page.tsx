@@ -35,7 +35,7 @@ const ArticlesPage = () => {
         <h1 className="text-4xl font-medium text-gray-500 hover:text-gray-900 mb-6">
           Users
         </h1>
-        <div className="bg-white shadow overflow-hidden sm:rounded-lg">
+        <div className="bg-white shadow overflow-hidden mobile:rounded-lg">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>

@@ -9,10 +9,10 @@ const includedFeatures = [
 
 export default function PricingSection() {
   return (
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+    <div className="bg-white py-24 mobile:py-32">
+      <div className="mx-auto max-w-7xl px-6 laptop:px-8">
+        <div className="mx-auto max-w-2xl mobile:text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 mobile:text-4xl">
             Çmime i thjeshtë pa hile
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -20,8 +20,8 @@ export default function PricingSection() {
             bëhen pjesë e ketij komuniteti.
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
-          <div className="p-8 sm:p-10 lg:flex-auto">
+        <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 mobile:mt-20 laptop:mx-0 laptop:flex laptop:max-w-none">
+          <div className="p-8 mobile:p-10 laptop:flex-auto">
             <h3 className="text-2xl font-bold tracking-tight text-gray-900">
               Akses i përjetshëm
             </h3>
@@ -39,7 +39,7 @@ export default function PricingSection() {
             </div>
             <ul
               role="list"
-              className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
+              className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 mobile:grid-cols-2 mobile:gap-6"
             >
               {includedFeatures.map((feature) => (
                 <li key={feature} className="flex gap-x-3">
@@ -52,8 +52,8 @@ export default function PricingSection() {
               ))}
             </ul>
           </div>
-          <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-            <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+          <div className="-mt-2 p-2 laptop:mt-0 laptop:w-full laptop:max-w-md laptop:flex-shrink-0">
+            <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 laptop:flex laptop:flex-col laptop:justify-center laptop:py-16">
               <div className="mx-auto max-w-xs px-8">
                 <p className="text-base font-semibold text-gray-600">
                   Një pagesë, përgjithmonë akses

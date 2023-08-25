@@ -68,8 +68,8 @@ const LessonCard = ({ lesson }) => {
       )}
 
       <div className="cursor-pointer" onClick={() => setIsOpen(true)}>
-        <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-          <div className="md:shrink-0 relative">
+        <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 desktop:aspect-h-8 desktop:aspect-w-7">
+          <div className="tablet:shrink-0 relative">
             <img
               src={lesson.imageSrc}
               alt={lesson.imageAlt}

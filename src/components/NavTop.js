@@ -3,15 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import signOutUser from "@/firebase/auth/signout";
 import { useRouter } from "next/navigation";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-
-const user = {
-  name: "Tom Cook",
-  email: "tom@example.com",
-  imageUrl:
-    "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?w=1060&t=st=1686746499~exp=1686747099~hmac=3ec19bf31785b6aa14159160211e8b2b32906c4bde13d3574756451d568f32a6",
-};
+import { Tooltip } from "flowbite-react";
 
 const userNavigation = [
   // { name: "Admin Portal", href: "admin" },
@@ -38,8 +32,8 @@ const NavTop = ({ user, href }) => {
       href: "/dashboard",
       current: href === "/dashboard",
     },
-    { name: "Analiza Teknike", href: "#", current: href === "#" },
-    { name: "Kalendari Ekonomik", href: "#", current: href === "#" },
+    { name: "Analiza Teknike", href: "/dashboard", current: href === "" },
+    { name: "Kalendari Ekonomik", href: "/dashboard", current: href === "" },
   ];
 
   const handleSignOut = async () => {
@@ -57,7 +51,7 @@ const NavTop = ({ user, href }) => {
     <Disclosure as="nav" className="bg-gray-800 fixed w-full z-50 top-0 ">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 mobile:px-6 laptop:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
@@ -71,29 +65,45 @@ const NavTop = ({ user, href }) => {
                     />
                   </Link>
                 </div>
-                <div className="hidden lg:block">
+                <div className="hidden laptop:block">
                   <div className="ml-10 flex items-baseline space-x-4">
                     {navigation.map((item) => (
-                      <Link
-                        href={item.href}
+                      <Tooltip
+                        style="light"
+                        content={
+                          item.name === "Analiza Teknike" ||
+                          item.name === "Kalendari Ekonomik"
+                            ? "Së shpejti..."
+                            : item.name
+                        }
                         key={item.name}
-                        className={classNames(
-                          item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "rounded-md px-3 py-2 text-sm font-medium"
-                        )}
-                        aria-current={item.current ? "page" : undefined}
                       >
-                        {item.name}
-                      </Link>
+                        <Link
+                          href={item.href}
+                          key={item.name}
+                          className={classNames(
+                            item.current
+                              ? "bg-gray-900 text-white"
+                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
+
+                            "rounded-md px-3 py-2 text-sm font-medium",
+                            item.name === "Analiza Teknike" ||
+                              item.name === "Kalendari Ekonomik"
+                              ? "cursor-not-allowed"
+                              : ""
+                          )}
+                          aria-current={item.current ? "page" : undefined}
+                        >
+                          {item.name}
+                        </Link>
+                      </Tooltip>
                     ))}
                   </div>
                 </div>
               </div>
               {user ? (
-                <div className="hidden lg:block">
-                  <div className="ml-4 flex items-center md:ml-6 text-gray-400">
+                <div className="hidden laptop:block">
+                  <div className="ml-4 flex items-center tablet:ml-6 text-gray-400">
                     <button
                       type="button"
                       className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -165,7 +175,7 @@ const NavTop = ({ user, href }) => {
               ) : (
                 <Link
                   href={"/login"}
-                  className="text-gray-300 hover:text-white text-sm hidden md:block"
+                  className="text-gray-300 hover:text-white text-sm hidden tablet:block"
                 >
                   Mësimet premium{" "}
                   <svg
@@ -184,7 +194,7 @@ const NavTop = ({ user, href }) => {
                   </svg>
                 </Link>
               )}
-              <div className="-mr-2 flex lg:hidden">
+              <div className="-mr-2 flex laptop:hidden">
                 {/* Mobile menu button */}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="sr-only">Open main menu</span>
@@ -198,103 +208,126 @@ const NavTop = ({ user, href }) => {
             </div>
           </div>
 
-          <Disclosure.Panel className="lg:hidden">
-            <div className="space-y-1 px-2 pb-24 pt-12 sm:px-3 text-center">
+          <Disclosure.Panel className="laptop:hidden">
+            <div className="space-y-1 px-2 pb-4 pt-12 mobile:px-3 text-center">
+              <h1 className="text-2xl font-bold text-white mt-0 mb-24">
+                VisionFX Academy
+              </h1>
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500/10">
-                  <div className="space-y-2 py-6">
-                    {navigation.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className="-mx-3 block px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700"
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {user ? (
-              <div className="border-t border-gray-700 pb-3 pt-4">
-                <div className="flex items-center px-5">
-                  <div className="flex-shrink-0">
-                    <Image
-                      className="rounded-full"
-                      src={
-                        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80\n"
-                      }
-                      alt="Profile picture"
-                      width={30}
-                      height={30}
-                    />
-                  </div>
-                  <div className="ml-3">
-                    <div className="text-base text-sm font-medium leading-none text-gray-400">
-                      {user?.displayName || "User:"}
-                    </div>
-                    <div className="text-sm font-medium leading-none text-white">
-                      {user?.email.split("@")[0] || "email"}
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                  >
-                    <div className="mt-3 space-y-1 px-2">
-                      {userNavigation.map((item) => (
-                        <Link
-                          href={item.href}
-                          key={item.name}
-                          className={
-                            "text-sm block rounded-md py-2 px-3 text-base font-medium text-white hover:bg-gray-700"
-                          }
-                          onClick={handleSignOut}
-                        >
-                          {item.name}
-                          <span>
-                            <svg
-                              className="h-5 w-5 inline-block ml-1 pb-0.5"
-                              strokeWidth="3"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
+                  <div className="space-y-2 py-6 w-full">
+                    {navigation.map((item) => {
+                      const isComingSoon =
+                        item.name === "Analiza Teknike" ||
+                        item.name === "Kalendari Ekonomik";
+
+                      return (
+                        <React.Fragment key={item.name}>
+                          {isComingSoon ? (
+                            <Link
+                              href={item.href}
+                              className="-mx-3 block px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700 cursor-not-allowed w-full"
                             >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M9 5l7 7-7 7"
-                              />
-                            </svg>
-                          </span>
-                        </Link>
-                      ))}
-                    </div>{" "}
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div className="pt-4 pb-3 border-t border-gray-700">
-                <div className="flex items-center px-5">
-                  <div className="ml-auto">
-                    <Link href={"/login"}>
-                      <a className="font-medium text-indigo-600 hover:text-indigo-500">
-                        Log in
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="ml-3">
-                    <Link href={"/signup"}>
-                      <a className="inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                        Sign up
-                      </a>
-                    </Link>
+                              {item.name}{" "}
+                              <span className="text-xs">(së shpejti)</span>
+                            </Link>
+                          ) : (
+                            <Link
+                              href={item.href}
+                              className="-mx-3 block px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700 w-full"
+                            >
+                              {item.name}
+                            </Link>
+                          )}
+                        </React.Fragment>
+                      );
+                    })}
                   </div>
                 </div>
+                <div className="h-12" />
               </div>
-            )}
+              {user ? (
+                <div className="border-t border-gray-700 pt-4">
+                  <div className="flex items-center px-5">
+                    <div className="flex-shrink-0">
+                      <Image
+                        className="rounded-full"
+                        src={
+                          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80\n"
+                        }
+                        alt="Profile picture"
+                        width={30}
+                        height={30}
+                      />
+                    </div>
+                    <div className="ml-3">
+                      <div className="text-base text-sm font-medium leading-none text-gray-400">
+                        {user?.displayName || "User:"}
+                      </div>
+                      <div className="text-sm font-medium leading-none text-white">
+                        {user?.email.split("@")[0] || "email"}
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    >
+                      <div className="mt-3 space-y-1 px-2">
+                        {userNavigation.map((item) => (
+                          <Link
+                            href={item.href}
+                            key={item.name}
+                            className={
+                              "text-sm block rounded-md py-2 px-3 text-base font-medium text-white hover:bg-gray-700"
+                            }
+                            onClick={handleSignOut}
+                          >
+                            {item.name}
+                            <span>
+                              <svg
+                                className="h-5 w-5 inline-block ml-1 pb-0.5"
+                                strokeWidth="3"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M9 5l7 7-7 7"
+                                />
+                              </svg>
+                            </span>
+                          </Link>
+                        ))}
+                      </div>{" "}
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  href={"/login"}
+                  className="text-gray-300 hover:text-white text-sm "
+                >
+                  Login
+                  <svg
+                    className="h-5 w-5 inline-block ml-1 pb-0.5"
+                    strokeWidth="3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+              )}
+            </div>
           </Disclosure.Panel>
         </>
       )}
